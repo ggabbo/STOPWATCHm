@@ -1,68 +1,245 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@media screen and (min-width: 80rem) {
+  .box {
+    margin: 1em 2em;
+  }
+}
+@font-face {
+  font-family: berlinfraktur;
+  src: url(./assets/BerlinFraktur-24.otf);
+}
+@font-face {
+  font-family: bitwonder;
+  src: url(./assets/8-BITWONDER.TTF);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+body{
+  background-image: url(assets/background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  /* OPTIONAL */
+
 }
-a:hover {
-  color: #535bf2;
+.display{                                          /*COUNTER 00:00:00 GLOW RADIUS*/
+  color: rgb(39, 248, 133);
+  font-size: 5.5rem;
+  font-family: berlinfraktur;
+  text-align: center;
+  text-shadow: 0px 0px 5px rgba(39, 248, 151, 0.534), 
+               0px 0px 50px rgba(39, 248, 144, 0.74), 
+               0px 0px 30px rgba(60, 39, 248, 0.596);
+  border: none;
+  border-radius: 3px;
+
+
+
+                                                    /* COMPUTER SCREEN STYLE*/
+
+  cursor: default;
+
+  background-image: url(assets/overlay.png);
+  background-position: -2vh;
+  background-color: rgb(25, 28, 29);
+}
+.displayshadow{                               /*COUNTER 00:00:00 3D ILLUSION MONITOR*/
+
+  border-top: 7px solid rgb(15, 34, 37);
+  border-left: 7px solid rgb(28, 61, 47);
+  border-right: 5px solid rgb(33, 73, 56);
+  border-bottom: 5px solid rgb(15, 34, 37);
+  border-radius: 3px;
+
+  box-shadow: 0px 0px 0px 2px  rgb(10, 7, 3),
+              0 0 0 15px rgb(103, 109, 83), 
+              0 0 20px rgb(10, 7, 3) inset,
+              0px 0px 0px 17px  rgb(10, 7, 3),
+              0px 0px 0px 20px  rgba(10, 7, 3, 0.315)
+              ;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+.start-button{
+  color: rgb(174, 172, 160);
+  font-size: 3rem;
+  font-family: berlinfraktur;
+  text-align: center;
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+                                                     /*BUTTON STYLE*/
+  
+  margin-top: 30px;
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  border-top: 3px solid  rgb(188, 202, 138);
+  border-left: 3px solid rgb(49, 63, 52);
+  border-right: 7px solid rgb(49, 63, 52);
+  border-bottom: 7px solid rgb(30, 46, 33);
+  border-radius: 2px;
+
+  background-color:rgb(74, 85, 77);
+  box-shadow: 0px 0px 0px 3.5px rgb(36, 128, 14),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+.start-button:hover{
+  color: rgb(113, 185, 54);
+  text-shadow: 0px 0px 5px rgba(133, 233, 51, 0.637);
+  background-color:rgb(61, 70, 63);
+
+  border-top: 3px solid  rgb(159, 170, 117);
+  border-left: 3px solid rgb(37, 48, 39);
+  border-right: 7px solid rgb(37, 48, 39);
+  border-bottom: 7px solid rgb(23, 36, 25);
+
+  box-shadow: 0px 0px 0px 3.5px rgb(93, 184, 19),
+              0px 0px 10px 5px rgba(93, 184, 19, 0.575),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+}
+.start-button:active{
+  margin-top: 30px;
+  margin-left: 2px;
+  background-color: rgb(74, 85, 77);
+
+  border-right: 4px solid rgb(49, 63, 52);
+  border-bottom: 4px solid rgb(30, 46, 33);
+
+  box-shadow: 0px 0px 0px 3.5px rgb(116, 228, 25),
+              0px 0px 10px 5px rgba(93, 184, 19, 0.575),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+}
+.stop-button{
+  color: rgb(174, 172, 160);
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: berlinfraktur;
+  text-align: center;
+
+                                                     /*BUTTON STYLE*/
+  
+  margin-top: 30px;
+
+  border-top: 3px solid  rgb(202, 138, 138);
+  border-left: 3px solid rgb(63, 49, 49);
+  border-right: 7px solid rgb(63, 49, 49);
+  border-bottom: 7px solid rgb(46, 30, 30);
+  border-radius: 2px;
+
+  background-color:rgb(74, 85, 77);
+  box-shadow: 0px 0px 0px 3.5px rgb(128, 46, 14),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+  cursor: pointer;
+}
+.stop-button:hover{
+  color: rgb(255, 51, 36);
+  text-shadow: 0px 0px 4px rgba(250, 45, 45, 0.904);
+  background-color:rgb(70, 61, 61);
+
+  border-top: 3px solid  rgb(170, 117, 117);
+  border-left: 3px solid rgb(48, 37, 37);
+  border-right: 7px solid rgb(48, 37, 37);
+  border-bottom: 7px solid rgb(36, 23, 23);
+
+  box-shadow: 0px 0px 0px 3.5px rgb(204, 44, 16),
+              0px 0px 10px 5px rgba(243, 33, 33, 0.719),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+}
+.stop-button:active{
+  margin-top: 30px;
+  margin-left: 2.3px;
+  background-color: rgb(74, 85, 77);
+
+  border-right: 4px solid rgb(63, 49, 49);
+  border-bottom: 4px solid rgb(46, 30, 30);
+
+  box-shadow: 0px 0px 0px 3.5px rgb(255, 46, 9),
+              0px 0px 10px 5px rgba(243, 33, 33, 0.719),
+              0px 0px 0px 5.5px rgb(0, 0, 0),
+              0px 1px 0px 7.5px rgba(0, 0, 0, 0.411);
+}
+.reset-button{
+  color: rgb(78, 29, 14);
+  font-size: 3.3rem;
+  font-family: berlinfraktur;
+  text-align: center;
+                                                     /*BUTTON STYLE*/
+  
+  margin-top: 30px;
+
+  border-top: 5px solid rgba(252, 220, 77);
+  border-left: 5px solid rgb(211, 71, 28);
+  border-right: 5px solid rgb(172, 35, 17);
+  border-bottom: 5px solid rgb(172, 35, 17);
+  border-radius: 3px;
+
+  background-color:rgb(251, 128, 0);
+  box-shadow: 0px 0px 0px 2px rgb(0, 0, 0),
+              0px 1px 0px 4px rgba(0, 0, 0, 0.411);
+
+  cursor: pointer;
+
+}
+.reset-button:hover{
+  background-color:rgb(251, 92, 0);
+  color: rgb(255, 238, 0);
+  text-shadow: 0 0 5px rgba(240, 220, 44, 0.829);
+
+  border-top: 5px solid rgb(218, 157, 43);
+  border-left: 5px solid rgb(189, 61, 22);
+  border-right: 5px solid rgb(145, 29, 13);
+  border-bottom: 5px solid rgb(145, 29, 13);
+}
+.reset-button:active{
+  margin-top: 30.4px;
+  margin-bottom: 2px;
+  margin-right: 0.5px;
+  margin-left: 2px;
+  background-color:rgb(251, 128, 0);
+
+  border-top: 4.5px solid rgb(223, 195, 73);
+  border-left: 4.5px solid rgb(180, 62, 25);
+  border-right: 3.5px solid rgb(133, 29, 15);
+  border-bottom: 3.5px solid rgb(141, 30, 15);
+}
+.stopwatch{                        /*----------------'CONSOLE' STYLE-----------------*/
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+
+  border-top: 4px solid rgb(157, 184, 96);
+  border-left: 4px solid rgb(25, 51, 13);
+  border-right: 7px solid rgb(38, 92, 89);
+  border-bottom: 7px solid rgb(20, 49, 48);
+  border-radius: 10px;
+
+  background-color: rgb(56, 109, 84);
+  box-shadow:   0px 0px 40px rgb(33, 46, 21) inset,
+                0px 0px 0px 2px rgb(0, 0, 0);
+}
+.controls{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: auto;
+  padding-top: 25vh;
 }
